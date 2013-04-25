@@ -1,4 +1,13 @@
-grails
-======
+# grails cookbook
 
-Installs grails custom RPM
+# Requirements
+
+# Usage
+
+# Attributes
+
+# Recipes
+
+# Author
+
+Author:: Rally Software Development Corp (<thefellowship@rallydev.com>)
