@@ -4,4 +4,4 @@ group :integration do
 end
 
 metadata
-cookbook 'yum-rally', :git => "https://github.com/RallySoftware/yum-rally"
+cookbook 'yum-rally', :github => "RallySoftware-cookbooks/yum-rally"
