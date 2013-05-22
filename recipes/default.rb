@@ -2,11 +2,16 @@
 # Cookbook Name:: grails
 # Recipe:: default
 #
-# Copyright (C) 2013 Rally Software Development Corp
-# 
-# All rights reserved - Do Not Redistribute
+# Copyright (c) Rally Software Development Corp. 2013 (see https://github.com/RallySoftware-cookbooks/grails)
 #
 
-include_recipe "yum-rally::rally"
+include_recipe "java"
 
-package "grails"
+ark "grails" do
+  url node['grails']['source_url']
+  version node['grails']['version']
+  owner node['grails']['owner']
+  append_env_path true
+  action :install
+end
+

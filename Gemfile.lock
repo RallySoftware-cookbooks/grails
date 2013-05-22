@@ -1,11 +1,11 @@
 GIT
   remote: https://github.com/RallySoftware-cookbooks/jackchop
-  revision: 23a9e491dd67688af1d95518694f6323d2121f0b
+  revision: e62c43c236c3f3e74dbb0412ab5e646f1130a483
   specs:
     jackchop (0.2.0)
       berkshelf (~> 1.4.3)
-      chef (~> 11.4.4)
-      chefspec (~> 1.0.0)
+      chef (~> 11.4)
+      chefspec (~> 1)
       github_api (~> 0.9.7)
       highline (~> 1.6.19)
       json (~> 1.7.7)
@@ -58,10 +58,10 @@ GEM
       ohai (>= 0.6.0)
       rest-client (>= 1.0.4, < 1.7.0)
       yajl-ruby (~> 1.1)
-    chefspec (1.0.0)
+    chefspec (1.2.0)
       chef (>= 10.0)
       erubis
-      fauxhai (~> 0.1)
+      fauxhai (>= 0.1.1, < 2.0)
       minitest-chef-handler (>= 0.6.0)
       rspec (~> 2.0)
     chozo (0.6.1)
@@ -77,10 +77,10 @@ GEM
       multipart-post (~> 1.1)
     faraday_middleware (0.9.0)
       faraday (>= 0.7.4, < 0.9)
-    fauxhai (0.1.1)
-      chef
+    fauxhai (1.1.0)
       httparty
       net-ssh
+      ohai
     ffi (1.8.1)
     foodcritic (2.1.0)
       erubis
@@ -184,8 +184,8 @@ GEM
     rake (10.0.4)
     rest-client (1.6.7)
       mime-types (>= 1.16)
-    retryable (1.3.2)
-    ridley (0.12.1)
+    retryable (1.3.3)
+    ridley (0.12.2)
       activesupport (>= 3.2.0)
       addressable
       celluloid (~> 0.14.0)
@@ -224,7 +224,7 @@ GEM
     slop (3.4.5)
     solve (0.4.4)
       json
-    strainer (2.0.1)
+    strainer (2.0.2)
       berkshelf (~> 1.3)
     systemu (2.5.2)
     test-kitchen (1.0.0.alpha.6)
@@ -269,7 +269,7 @@ PLATFORMS
 DEPENDENCIES
   berkshelf (~> 1.4.3)
   chef (~> 11.4.0)
-  chefspec (~> 1.0.0)
+  chefspec (~> 1.2.0)
   foodcritic (~> 2.1.0)
   jackchop!
   json (= 1.7.7)
