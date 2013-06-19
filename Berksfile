@@ -1,8 +1,5 @@
 site :opscode
-group :integration do
-  cookbook "minitest-handler"
-end
 
 metadata
-cookbook 'ark'
+cookbook 'ark', :github => 'RallySoftware-cookbooks/ark'
 cookbook 'java'
