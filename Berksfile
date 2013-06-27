@@ -1,5 +1,6 @@
+chef_api :config
 site :opscode
 
 metadata
-cookbook 'ark', :github => 'RallySoftware-cookbooks/ark'
+cookbook 'ark', "0.2.3"
 cookbook 'java'
