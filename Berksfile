@@ -1,8 +1,4 @@
-site :opscode
-group :integration do
-  cookbook "minitest-handler"
-end
+chef_api :config
 
-metadata
-cookbook 'ark'
+cookbook 'ark', '= 0.2.3'
 cookbook 'java'

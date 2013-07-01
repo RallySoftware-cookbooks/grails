@@ -2,16 +2,38 @@
 # Cookbook Name:: grails
 # Recipe:: default
 #
-# Copyright (c) Rally Software Development Corp. 2013 (see https://github.com/RallySoftware-cookbooks/grails)
+# Copyright (c) 2013 Rally Software Development Corp
+#
+# Permission is hereby granted, free of charge, to any person obtaining
+# a copy of this software and associated documentation files (the
+# "Software"), to deal in the Software without restriction, including
+# without limitation the rights to use, copy, modify, merge, publish,
+# distribute, sublicense, and/or sell copies of the Software, and to
+# permit persons to whom the Software is furnished to do so, subject to
+# the following conditions:
+#
+# The above copyright notice and this permission notice shall be
+# included in all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+# NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+# LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+# OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+# WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 
-include_recipe "java"
+include_recipe 'ark'
 
-ark "grails" do
+ark 'grails' do
   url node['grails']['source_url']
   version node['grails']['version']
+  path node['grails']['path']
   owner node['grails']['owner']
+  group node['grails']['group']
+  mode node['grails']['mode']
   append_env_path true
-  action :install
+  action :put
 end
 
