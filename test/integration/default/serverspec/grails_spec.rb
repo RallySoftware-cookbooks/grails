@@ -1,6 +1,6 @@
 require_relative 'spec_helper'
 
-describe file('/usr/local/grails-2.1.1') do
+describe file('/usr/local/grails') do
   it { should be_directory }
   it { should be_mode 755 }
   it { should be_owned_by 'root' }

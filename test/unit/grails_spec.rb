@@ -5,7 +5,7 @@ describe 'grails::default' do
   let (:package_name) { 'grails' }
   let (:owner) { 'root' }
   let (:group) { 'root' }
-  let (:path) { '/usr/local/grails-2.1.1' }
+  let (:path) { '/usr/local' }
   let (:chef_run) { ChefSpec::ChefRunner.new(:step_into => [:ark]) }
 
   before do
