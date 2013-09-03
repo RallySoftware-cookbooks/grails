@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/RallySoftware-cookbooks/grails.png?branch=master)](https://travis-ci.org/RallySoftware-cookbooks/grails)
-
 Description
 ===========
 Installs the grails library - 2.1.1 by default.
