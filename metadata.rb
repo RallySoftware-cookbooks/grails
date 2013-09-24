@@ -11,5 +11,5 @@ recipe 'grails::default', 'Installs grails'
 supports 'ubuntu'
 supports 'centos'
 
-depends 'ark'
-depends 'java'
+depends 'ark', '~> 0.3.2'
+depends 'java', '~> 1.13.0'
