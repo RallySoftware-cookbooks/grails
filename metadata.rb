@@ -11,5 +11,5 @@ recipe 'grails::default', 'Installs grails'
 supports 'ubuntu'
 supports 'centos'
 
-depends 'ark', '~> 0.3.2'
-depends 'java', '~> 1.13.0'
+depends 'java' #Do not put a symver for this cookbook
+depends 'ark', '~> 0.3'
