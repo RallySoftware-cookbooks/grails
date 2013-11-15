@@ -2,26 +2,16 @@ require_relative 'spec_helper'
 
 describe 'grails::default' do
 
-  let (:package_name) { 'grails' }
-  let (:owner) { 'root' }
-  let (:group) { 'root' }
-  let (:path) { '/usr/local' }
-  let (:chef_run) { ChefSpec::ChefRunner.new(:step_into => [:ark]) }
+  let(:package_name) { 'grails' }
+  let(:owner) { 'root' }
+  let(:group) { 'root' }
+  let(:path) { '/usr/local' }
 
-  before do
-    chef_run.converge 'grails::default'
-  end
+  subject { ChefSpec::Runner.new(:step_into => [:ark]).converge described_recipe }
 
-  it 'creates grails file in correct location' do
-    expect(chef_run).to install_ark(package_name, path)
-  end
-
-  it 'creates grails file with correct ownership' do
-    expect(chef_run).to owner_group_ark(package_name, owner, group)
-  end
-
-  it 'creates grails file with correct permissions' do
-    expect(chef_run).to mode_ark(package_name, 755)
-  end
-
+  it { should put_ark(package_name).with(
+    :owner => owner,
+    :group => group,
+    :mode => 755
+  )}
 end
