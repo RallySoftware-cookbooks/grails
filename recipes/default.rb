@@ -36,4 +36,3 @@ ark 'grails' do
   append_env_path true
   action :put
 end
-
